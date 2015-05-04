@@ -1,0 +1,28 @@
+
+<div class="container">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            Create New Customer
+        </div>
+
+        <div class="panel-body">
+            <form id="customerForm" name="customerForm" class="form-horizontal" role="form">
+
+                <label class="label">Customer Name </label>
+                <div style="margin-bottom: 25px" class="input-group">
+
+                    <input id="custName" type="text" class="form-control" name="custName" value="" placeholder="Customer Name" ng-model="newCust.name" required>
+                </div>
+                <span class="label">City </span>
+                <div style="margin-bottom: 25px" class="input-group">
+
+                    <input id="custCity" type="text" class="form-control" name="custCity" value="" placeholder="City" ng-model="newCust.city" required>
+                </div>
+
+                <button class="btn btn-success" ng-click="createCustomer()">Add <span class="glyphicon glyphicon-plus"></span></button>
+
+            </form>
+        </div>
+    </div>
+
+</div>
