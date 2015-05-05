@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            Invoice Details
+        </div>
+
+        <div class="panel-body">
+
+                <div class="row">
+                    <div class="col-md-2"><label>Customer Name</label></div> <div class="col-md-1"><span>{{cname}}</span></div>
+                    <div class="col-md-2"><label>Customer City</label></div> <div class="col-md-1"><span>{{ccity}}</span></div>
+                </div>
+            <br/>
+                <div class="row">
+                    <table class="table table-striped">
+                        <thead>
+                            <th>Invoice No.</th>
+                            <th>Item Name</th>
+                            <th>Item Cost</th>
+                            <th>Qunatiry</th>
+                            <th>Total Cost</th>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="list in lists">
+                            <td>{{list.id}}</td>
+                            <td>{{list.item.name}}</td>
+                            <td>{{list.item.cost}}</td>
+                            <td>{{list.quantity}}</td>
+                            <td>{{list.totalCost}}</td>
+                        </tr>
+                        <tr><td></td><td></td><td></td><td><label>Grand Total</label></td><td>{{grandTotal}}</td></tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+        </div>
+    </div>
+
+</div>

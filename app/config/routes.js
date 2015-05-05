@@ -4,7 +4,7 @@
 angular.module('invoice')
     .config(function($stateProvider, $urlRouterProvider){
 
-        $urlRouterProvider.otherwise("/home");  // By default route to home
+        $urlRouterProvider.otherwise("/Home");  // By default route to home
 
         $stateProvider
             .state('home', {
@@ -30,5 +30,10 @@ angular.module('invoice')
                 url:"/listInvoice",
                 templateUrl: "app/invoice/views/listinvoice.html",
                 controller: "invoiceController"
+            })
+            .state('invoiceDetail', {
+                url:"/invoiceDetail/:invoiceId",
+                templateUrl: "app/invoice/views/invoicedetails.html",
+                controller: "invoiceDetailCtrl"
             })
     });
