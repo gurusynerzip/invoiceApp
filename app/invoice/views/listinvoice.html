@@ -1,7 +1,8 @@
 <div class="container">
     <div class="panel panel-info">
         <div class="panel-heading">
-            Invoice Details
+            Invoice Detail of All Customers
+            <div class="input-group" style="margin-left: 221px; margin-top: -21px;"><input classtype="text" ng-model="test"> <span class="glyphicon glyphicon-search"></span></div>
         </div>
 
         <div class="panel-body">
@@ -16,7 +17,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="invoice in allinvoices">
+                <tr ng-repeat="invoice in allinvoices | filter:test">
                     <td><a ui-sref="invoiceDetail({invoiceId: invoice.invoiceCustomer.id})">{{invoice.invoiceCustomer.name}}</a></td>
                     <td>{{invoice.item.name}}</td>
                     <td>{{invoice.item.cost}}</td>
