@@ -16,7 +16,7 @@
                <tbody>
                <tr ng-repeat="cust in custs">
                    <td>{{cust.id}}</td>
-                   <td>{{cust.name}}</td>
+                   <td><a ui-sref="invoiceDetail({invoiceId: cust.id})">{{cust.name}}</a> </td>
                    <td>{{cust.city}}</td>
                </tr>
                </tbody>

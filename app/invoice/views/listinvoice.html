@@ -13,6 +13,7 @@
                     <th>Item Name</th>
                     <th>Item Cost</th>
                     <th>Quantity</th>
+                    <th>Paid Details</th>
                     <th>Total Cost</th>
                 </tr>
                 </thead>
@@ -22,6 +23,7 @@
                     <td>{{invoice.item.name}}</td>
                     <td>{{invoice.item.cost}}</td>
                     <td>{{invoice.quantity}}</td>
+                    <td><input type="checkbox" ng-checked="{{invoice.paid}}"> </td>
                     <td>{{invoice.totalCost}}</td>
                 </tr>
                 </tbody>

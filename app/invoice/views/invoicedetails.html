@@ -11,13 +11,23 @@
                     <div class="col-md-2"><label>Customer City</label></div> <div class="col-md-1"><span>{{ccity}}</span></div>
                 </div>
             <br/>
-                <div class="row">
-                    <table class="table table-striped">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel  panel-warning" ng-show="warning">
+                        <div class="panel-heading"> No Invoice Found of this {{id}} customer </div>
+                    </div>
+                </div>
+            </div>
+                <div class="row" ng-show="success">
+                    <table class="table table-striped" >
                         <thead>
                             <th>Invoice No.</th>
                             <th>Item Name</th>
                             <th>Item Cost</th>
+                            <th>Paid Details</th>
                             <th>Qunatiry</th>
+
                             <th>Total Cost</th>
                         </thead>
                         <tbody>
@@ -25,10 +35,11 @@
                             <td>{{list.id}}</td>
                             <td>{{list.item.name}}</td>
                             <td>{{list.item.cost}}</td>
+                            <td><input type="checkbox" ng-checked="{{list.paid}}"> </td>
                             <td>{{list.quantity}}</td>
                             <td>{{list.totalCost}}</td>
                         </tr>
-                        <tr><td></td><td></td><td></td><td><label>Grand Total</label></td><td>{{grandTotal}}</td></tr>
+                        <tr><td></td><td></td><td></td><td><label>Total Amount to Pay</label></td><td>{{grandTotal}}</td></tr>
                         </tbody>
                     </table>
 

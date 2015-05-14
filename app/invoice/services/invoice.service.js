@@ -9,12 +9,14 @@ angular.module('invoice')
               invoiceCustomer: { id: 100, name: "ABCD", city: "Pune"},
               item : { name: "tablet", cost: "8000"},
                  quantity: "1",
+                 paid: true,
                  totalCost: 8000
              },
              {id: 1001,
               invoiceCustomer: {id: 101, name:"XYZ", city: "Bombay"},
                  item: {name: "mobile", cost:"12000"},
                  quantity: "2",
+                 paid: false,
                  totalCost: 24000
              }],
            addInvoice : function(invoice){
