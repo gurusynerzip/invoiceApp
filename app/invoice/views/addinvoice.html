@@ -27,7 +27,7 @@
             </div>
             <div style="margin-bottom: 25px" class="input-group">
                 <label>Select Quantiry</label>
-                <select class="form-control" ng-model="newInvoice.quantity" required>
+                <select class="form-control" ng-model="newInvoice.quantity" ng-change = "AddItem()" required>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -37,9 +37,9 @@
             <div style="margin-bottom: 25px" class="input-group">
                 <input type="checkbox" name="paid" ng-model="newInvoice.paid" ng-init="newInvoice.paid=false"> Paid
             </div>
-            <div style="margin-bottom: 25px" class="input-group">
+           <!-- <div style="margin-bottom: 25px" class="input-group">
             <button class="btn btn-info" ng-click="AddItem()">Add Item</span></button>
-            </div>
+            </div>-->
             <div style="margin-bottom: 25px" class="input-group">
                 <input  type="text" class="form-control"  value="" placeholder="Total Cost" ng-model="newInvoice.totalCost"  required>
             </div>
